@@ -1,0 +1,17 @@
+﻿#containerStatic {
+    height: 100vh;
+}
+
+#containerMain {
+    margin-bottom: 63px;
+}
+
+#containerNav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.dropdown-menu 
+{
+
+}
