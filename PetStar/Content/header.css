@@ -4,7 +4,7 @@
 }
 
 .carousel-indicators li {
-    background-image: url(../Resources/slider_btn.png);
+    background-image: url(../Resources/slider_btn_white.png);
     background-position: center;
     background-repeat: no-repeat;
     height: 45px;
@@ -13,16 +13,38 @@
 
 #barMain {
     position: absolute;
-    padding: 7%;
+    padding: 3% 4% 0 3%;
     width: 100%;
     z-index: 2;
+    display: -moz-box; /* Firefox */
+    display: -webkit-box; /* Safari and Chrome */
+    display: -ms-flexbox; /* Internet Explorer 10 */
+    display: flex;
+    display: -webkit-flex; /* Safari 7 */
 }
 
 .btnSocial {
     margin: 8px;
-    float: right;
+    /*float: right;*/
+    text-transform: uppercase;
+    font-size: 12px;
 }
-
+#contIcon {
+}
+#contIcon img{
+}
+#contMenu {
+}
+#contMenu a {
+    color:white;
+}
 #contSocial {
-    width: 100%;
+    display: -moz-box; /* Firefox */
+    display: -webkit-box; /* Safari and Chrome */
+    display: -ms-flexbox; /* Internet Explorer 10 */
+    display: flex;
+    display: -webkit-flex; /* Safari 7 */
+}
+.carousel-indicators {
+    margin-bottom: 120px;
 }
