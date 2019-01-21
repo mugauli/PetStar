@@ -11,6 +11,7 @@ body {
 	font-family: 'Myriad', Sans-serif;
 	line-height: 1.4;
     min-width:340px;
+		color: #656464;
 }
 section {
 	background-color: #f7f7f7;
@@ -21,6 +22,7 @@ h2.title {
 	margin-bottom: 1.3rem;
 	color: #000;
 	font-size:2.2rem;
+	text-align: center;
 }
 .btn-primary {
 	background: #3067b0;
@@ -31,7 +33,7 @@ h2.title {
 	font-size:.7rem;
 	letter-spacing: .65;
 	border-radius: 5px;
-
+	text-transform: uppercase;
 }
 .green-hr {
     width: 40px;
