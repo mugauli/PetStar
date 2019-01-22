@@ -1,9 +1,9 @@
-﻿.carousel-inner img {
+﻿#sliderMain .carousel-inner img {
     width: 100%;
     height: 94vh;
 }
 
-.carousel-indicators li {
+#sliderMain .carousel-indicators li {
     background-image: url(../Resources/slider_btn_white.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -45,6 +45,25 @@
     display: flex;
     display: -webkit-flex; /* Safari 7 */
 }
-.carousel-indicators {
+#sliderMain  .carousel-indicators {
     margin-bottom: 120px;
+}
+#btnIdiomaIcon img {
+    width: 20px;
+}
+
+
+@media (max-width: 768px) {
+    #contIcon img {
+        width: 30vw;
+        margin: auto;
+    }
+
+    #contIcon {
+        display: -moz-box; /* Firefox */
+        display: -webkit-box; /* Safari and Chrome */
+        display: -ms-flexbox; /* Internet Explorer 10 */
+        display: flex;
+        display: -webkit-flex; /* Safari 7 */
+    }
 }

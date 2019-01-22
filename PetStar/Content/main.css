@@ -10,6 +10,7 @@
 body {
 	font-family: 'Myriad', Sans-serif;
 	line-height: 1.4;
+    min-width:340px;
 }
 section {
 	background-color: #f7f7f7;
@@ -31,4 +32,10 @@ h2.title {
 	letter-spacing: .65;
 	border-radius: 5px;
 
+}
+.green-hr {
+    width: 40px;
+    height: 4px;
+    background: #4fa333;
+    margin: 0 auto 1.3rem;
 }

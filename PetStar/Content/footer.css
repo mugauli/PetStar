@@ -1,8 +1,131 @@
-﻿.titEnlace 
-{
-    font Myriad Pro, Semibold;
-
+﻿#titEnlace {
+    font-family: Myriad Pro, Semibold;
+    font-size: 14px;
 }
+
 footer {
     background: #EDEDED;
+}
+
+#ltsEnlace {
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 20px;
+}
+
+    #ltsEnlace img {
+        width: 15px;
+        margin: 0px 5px;
+    }
+
+.btnEnlace {
+    text-decoration: none;
+    color: #5F5E5E;
+    font-size: 13px;
+    font-family: Myriad Pro, Regular;
+}
+
+#txSocial {
+    font-family: Myriad Pro, Regular;
+    color: #5F5E5E;
+    font-size: 12px;
+    line-height: 2;
+}
+
+#ftBtnSocial {
+    width: 110px;
+    height: 42px;
+    border: 1px solid #9B9B9B;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-family: Myriad Pro, Semibold;
+    font-size: 12px;
+    color: #9B9B9B;
+    background: transparent;
+}
+
+#ftContSocial {
+    display: -moz-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+}
+
+#sliderFooter .carousel-indicators li {
+    width: 8px;
+    height: 8px;
+    background: #CCCCCC;
+    width: 8px;
+    height: 8px;
+    background: #CCCCCC;
+    margin: 0px 0px 0px 10px;
+    border: none;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+#sliderFooter .carousel-indicators .active {
+    opacity: 1;
+    background: #4FA333;
+}
+
+.contSliderFooter {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.itenSliderFooter {
+    background: #ffffff;
+    /* width: 88px; */
+    height: 68px;
+    margin: 10px 0px;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+}
+
+#footerLogo {
+    font-size: 11px;
+    font-family: Myriad Pro, Semibold;
+    color: #000000;
+    text-decoration: none;
+}
+
+    #footerLogo a {
+        font-size: 11px;
+        font-family: Myriad Pro, Semibold;
+        color: #000000;
+        text-decoration: none;
+    }
+
+.margintop {
+    margin-top: 25px;
+}
+
+.contSliderFooter .col-4 {
+    padding-right: 2px !important;
+    padding-left: 2px !important;
+}
+
+.itenSliderFooter img {
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#sliderFooter .carousel-inner {
+    min-height: 176px;
+}
+
+
+
+#sliderFooter .carousel-indicators {
+    bottom: -30px;
+}
+
+#sliderFooter {
+    margin-bottom: 25px;
 }

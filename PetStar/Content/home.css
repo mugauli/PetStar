@@ -1,0 +1,32 @@
+.info-module {
+    padding: 100px 0;
+    /* color: #656464; */
+    text-align: center;
+}
+.full-width {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 2rem;
+    text-align: center;
+}
+.darken-overlay {
+    position: absolute;
+    width: 100%;
+    background: rgba(0,0,0,.5);
+    height: 100%;
+    top: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+}
+.full-width img {
+    min-width: 100%;
+    height: auto;
+    max-height: 300px;
+    overflow: hidden;
+}
