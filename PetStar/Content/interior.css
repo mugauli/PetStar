@@ -126,7 +126,30 @@
 }
 .contact-module .left-module, .contact-module .right-module{
 	text-align: center;
-	padding: 20px
+	padding: 20px 60px;
+	height:320px;
+	display: flex;
+	align-items: center;
+}
+.contact-module p{
+	font-size: 1.8rem;
+	font-weight:bold;
+}
+.contact-module small{
+	font-size: 1rem;
+}
+.contact-module .left-module p {
+	color: #000;
+}
+.contact-module input {
+	width: 70%;
+	margin: 7px auto;
+	line-height: 1;
+}
+
+.contact-module .inner {
+	width: 100%; 
+	text-align:center;
 }
 .contact-module .left-module {
 	background-color: #fff;
@@ -135,4 +158,14 @@
 .contact-module .right-module {
 	background-color: #3067b0;
 	color: #fff;
+}
+.img-calc {
+	width: 75px;
+	height: auto;
+	margin-bottom: 50px
+}
+.spacer.big {
+	height: 100px;
+	width: 100;
+	display:block;
 }
