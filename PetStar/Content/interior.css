@@ -169,3 +169,15 @@
 	width: 100;
 	display:block;
 }
+.placeholder-module {
+	width: 100%;
+	height:800px;
+	background:#ccc;
+	display: flex;
+	align-items: center;
+}
+.placeholder-module .title{
+	width: 100%;
+	display:block;
+	text-align: center;
+}
