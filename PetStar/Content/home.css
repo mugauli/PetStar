@@ -1,0 +1,194 @@
+.info-module {
+    padding: 100px 0;
+    /* color: #656464; */
+    text-align: center;
+}
+
+.full-width {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 2rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.darken-overlay {
+    position: absolute;
+    width: 100%;
+    background: rgba(0,0,0,.5);
+    height: 100%;
+    top: 0;
+    color: #fff;
+    display: -moz-box; /* Firefox */
+    display: -webkit-box; /* Safari and Chrome */
+    display: -ms-flexbox; /* Internet Explorer 10 */
+    display: flex;
+    display: -webkit-flex; /* Safari 7 */
+    align-items: center;
+    min-width: 100%;
+}
+
+.full-width img {
+    min-width: 100%;
+    height: auto;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.contFotos {
+    padding: 0px;
+    position: relative;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+    .contFotos img {
+        height: 400px;
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .contFotos > div {
+        overflow: hidden;
+        padding: 0;
+    }
+
+.overlayFotos {
+    width: 100%;
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    height: 400px;
+    display: -moz-box; /* Firefox */
+    display: -webkit-box; /* Safari and Chrome */
+    display: -ms-flexbox; /* Internet Explorer 10 */
+    display: flex;
+    display: -webkit-flex; /* Safari 7 */
+}
+
+.tituloFotos {
+    /*font-family: Myriad Pro, Regular;*/
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.descFotos {
+    /*font-family: Myriad Pro, Regular;*/
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 31px;
+}
+
+.btnFotos {
+    width: 120px;
+    height: 42px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    color: #ffffff !important;
+    background: transparent;
+    font-size: 12px;
+}
+
+.contIntFotos {
+    margin: auto;
+    max-width: 55%;
+}
+
+.contNews {
+    padding: 30px 5px;
+}
+
+.imageNews {
+    width: 80px;
+    height: 80px;
+}
+
+.titleNews {
+    color: #2F67B0;
+    line-height: 25px;
+    font-size: 16px;
+}
+
+.descNews {
+    color: #5F5E5E;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+#titleNews {
+    color: #000000;
+    font-size: 30px;
+    line-height: 43px;
+    font-weight: bold;
+    padding: 10px;
+    padding-bottom: 0px;
+    width: 100%;
+}
+
+.green-news-hr {
+    width: 40px;
+    height: 4px;
+    background: #4fa333;
+    margin: 0 10px 2.3rem;
+}
+
+.itemNews {
+    margin-bottom: 4%;
+}
+
+.btnNews {
+    margin-left: 4%;
+}
+
+.itemGaleriaNews {
+    padding: 4px;
+}
+
+    .itemGaleriaNews img {
+
+    }
+
+#containerGaleriaNews {
+    display: -moz-box; /* Firefox */
+    display: -webkit-box; /* Safari and Chrome */
+    display: -ms-flexbox; /* Internet Explorer 10 */
+    display: flex;
+    display: -webkit-flex; /* Safari 7 */
+    -webkit-transition: margin 2s;
+    transition: margin 2s;
+}
+
+#conMainGalery {
+    overflow: hidden;
+    margin: auto;
+}
+
+.btnNewsSlider {
+    position: absolute;
+    cursor: pointer;
+    margin-top: 5%;
+}
+.descItemGalery {
+    color: #5F5E5E;
+    font-size: 13px;
+    line-height: 25px;
+}
+#prevNews {
+    
+    left: 3%;
+    
+}
+#nextNews {
+    right:3%;
+}
+
+#videoGal {
+    margin-top: 4%;
+}
