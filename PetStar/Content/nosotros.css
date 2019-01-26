@@ -1,0 +1,36 @@
+
+#imgNosotros {
+    width: 100%;
+}
+#titleOur {
+    color: #000000;
+    font-size: 30px;
+    line-height: 43px;
+    font-weight: bold;
+    padding: 10px;
+    padding-bottom: 0px;
+    width: 100%;
+}
+#descOur {
+    color: #5F5E5E;
+    font-size: 16px;
+    line-height: 16px;
+}
+#nameOur {
+    color: #5F5E5E;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+#jobOur {
+    color: #2F67B0;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+#imgDirectorOur {
+    width: 100%;
+    
+}
+.conMsg > div {
+    margin-bottom: 10%;
+}
