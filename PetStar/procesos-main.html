@@ -10,13 +10,140 @@
     <link href="Content/footer.css" rel="stylesheet" />
     <link href="Content/main.css" rel="stylesheet" />
     <link href="Content/interior.css" rel="stylesheet" />
+    <link href="Content/modal.css" rel="stylesheet" />
 
     <script src="Scripts/jquery-3.0.0.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
+    
+    
 
     <!--<script src="Scripts/popper.js"></script>-->
 </head>
 <body>
+
+    <!-- Start Modal -->
+    <div class="modal pet fade" id="petModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button class="modal-close-btn" data-dismiss="modal" aria-label="Close">
+                <img src="Resources/close.png">
+            </button>
+          <div class="modal-header">
+            <img src="Resources/slider_btn.png" class="d-block mx-auto">
+            <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button> -->
+          </div>
+          <div class="modal-body">
+                <div class="container">
+                    <div class="info-module">
+                        <h2 class="title">Satisfaccion de sevicio al socio acopiador</h2>
+                        <div class="green-hr"></div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit pretium diam. Etiam dignissim porta erat ac consectetur. Donec ultricies at urna at rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</p>
+                        <img src="Resources/acopio.png" class="mx-auto">
+                    </div>
+                    
+                  
+                </div>
+          </div>
+          <div class="modal-footer">
+            <div id="containerNav">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item dropup">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink_Nosotros" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Nosotros
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Historia</a>
+                                    <a class="dropdown-item" href="#" >Ética y Filosofía Institucional </a>
+                                    <a class="dropdown-item" href="#">Certificaciones</a>
+                                    <a class="dropdown-item" href="#">Accionistas</a>
+                                    <a class="dropdown-item" href="#">Educación Ambiental</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropup">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink_Procesos" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                    Procesos
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#"data-toggle="modal" data-target="#petModal">Acopio Inclusivo</a>
+                                    <a class="dropdown-item" href="#">Proceso acopio</a>
+                                    <a class="dropdown-item" href="#">Proceso reciclado</a>
+                                    <a class="dropdown-item" href="#">Mercado clientes</a>
+                                    <a class="dropdown-item" href="#">Laboratorio y botelloteca</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropup">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink_Sustenta" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Sustentabilidad
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Valor Social</a>
+                                    <a class="dropdown-item" href="#">Valor Ambiental </a>
+                                    <a class="dropdown-item" href="#">Valor Económico</a>
+                                    <a class="dropdown-item" href="#">Informe de sustentabilidad 2017</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropup">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink_Ambiental" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Educación Ambiental
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Museo-Auditorio</a>
+                                    <a class="dropdown-item" href="#">Agentes de cambio !Súmate¡</a>
+                                    <a class="dropdown-item" href="#" id="MenuEspecial">Recorrido virtual</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropup">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink_Prensa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Sala de prensa
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">PetStar en los medios</a>
+                                    <a class="dropdown-item" href="#">Noticias petstar</a>
+                                    <a class="dropdown-item" href="#">Entrevistas y conferencias</a>
+                                    <a class="dropdown-item" href="#">Accionistas</a>
+                                    <a class="dropdown-item" href="#">Educación Ambiental</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropup">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink_Galeria" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Galería
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Proceso de acopio</a>
+                                    <a class="dropdown-item" href="#">Proceso de reciclado </a>
+                                    <a class="dropdown-item" href="#">Museo-Auditorio</a>
+                                    <a class="dropdown-item" href="#">Botelloteca</a>
+                                    <a class="dropdown-item" href="#">Laboratorio</a>
+                                    <a class="dropdown-item" href="#">Eventos</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a class="navbar-brand" href="#">
+                        <img src="Resources/Icon_green.png" />
+                    </a>
+                </nav>
+            </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <form id="form1" runat="server">
         <div id="containerStatic">
             <div id="containerMain">
@@ -132,7 +259,7 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <a class="dropdown-item" href="#">Historia</a>
-                                    <a class="dropdown-item" href="#">Ética y Filosofía Institucional </a>
+                                    <a class="dropdown-item" href="#" >Ética y Filosofía Institucional </a>
                                     <a class="dropdown-item" href="#">Certificaciones</a>
                                     <a class="dropdown-item" href="#">Accionistas</a>
                                     <a class="dropdown-item" href="#">Educación Ambiental</a>
@@ -143,9 +270,9 @@
                                     Procesos
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Acopio Inclusivo</a>
-                                    <a class="dropdown-item" href="#">Proceso acopio</a>
-                                    <a class="dropdown-item" href="#">Proceso reciclado</a>
+                                    <a class="dropdown-item sub-link" id="luis1" href="#" data-toggle="modal" data-target="#petModal">Acopio Inclusivo</a>
+                                    <a class="dropdown-item" href="#" id="luis2">Proceso acopio</a>
+                                    <a class="dropdown-item" href="#" id="luis3">Proceso reciclado</a>
                                     <a class="dropdown-item" href="#">Mercado clientes</a>
                                     <a class="dropdown-item" href="#">Laboratorio y botelloteca</a>
                                 </div>
@@ -209,5 +336,7 @@
             </div>
         </div>
     </form>
+    
+    <script type="text/javascript" src="Scripts/modal.js"></script>
 </body>
 </html>
