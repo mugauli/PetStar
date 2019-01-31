@@ -41,6 +41,12 @@
 	max-height: 300px;
 	overflow: hidden;
 }
+.full-width.big {
+	height: 420px;
+}
+.full-width.big img{
+	height: 420px;
+}
 .grid {
 	width: 100%;
 }

@@ -22,8 +22,8 @@
 	padding-bottom: 40px;
 	border-bottom: none;
 }
-.modal.pet .modal-close-btn{
-	position: absolute;
+.modal-close-btn{
+	position: fixed;
 	top: 60px;
 	right: 100px;
 	width: 50px;
@@ -32,6 +32,7 @@
 	border-radius: 50%;
 	padding:11px;
 	border:none;
+	z-index: 2
 }
 .modal.pet .info-module {
 	padding: 0;
@@ -50,4 +51,10 @@
 }
 .modal-backdrop {
    background-color: transparent;
+}
+.modal-body {
+	padding: 0;
+}
+.modal .container{
+	max-width: 870px;
 }
