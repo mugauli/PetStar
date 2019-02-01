@@ -11,7 +11,10 @@ body {
 	font-family: 'Myriad', Sans-serif;
 	line-height: 1.4;
     min-width:340px;
-		color: #656464;
+	color: #656464;
+	transition: top .3s linear;
+	position: absolute;
+	top: 0
 }
 section {
 	background-color: #f7f7f7;
