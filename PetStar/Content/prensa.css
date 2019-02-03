@@ -1,0 +1,49 @@
+.filters {
+	padding: 30px;
+	border-bottom: 1px solid #e3e3e3;
+	margin-bottom: 30px;
+}
+
+.m-note{
+	text-align: left;
+	margin-bottom: 38px;
+
+}
+.note-content{
+	padding: 35px 25px;
+	width: 100%;
+	background-color: #fff;
+}
+.note-img {
+	width: 100%;
+	height: auto;
+}
+.note-img img{
+	object-fit: cover;
+}
+p.art-title {
+	color:#3067b0;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.art-date{
+	color: #4fa333;
+	font-size: .7rem;
+	margin-bottom: 35px;
+}
+.share-btn{
+	float: right;
+}
+.download-btn{
+	margin-right: 8px;
+}
+.art-abstract {
+	margin-bottom: 50px;
+}
+.pag-tot {
+	margin-top: 5px;
+	margin-left: 15px;
+}
+.paginador {
+	float: right;
+}
