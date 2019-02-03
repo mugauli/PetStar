@@ -32,3 +32,50 @@
 	margin-bottom: 45px;
 	font-size: 1.25rem;
 }
+.tab-module {
+	width: 100%;
+	position: relative;
+	min-height: 300px;
+}
+.gray{
+	height: 60px;
+	width:100%;
+	background-color: #ecebeb;
+	position: relative;
+	top: 0
+}
+.tab-element{
+	z-index: 10
+}
+.tab-content{
+	padding: 70px 10px;
+}
+.tab-module .subtitle{
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-bottom: 40px;
+}
+.tab-module .nav-tabs{
+	border-color: transparent;
+	background: #ecebeb;
+	height: 61px
+}
+.tab-module .nav-item{
+	padding: 0
+}
+.tab-module .nav-links {
+	margin: 0;
+}
+.tab-module a.nav-link {
+	color: #9b9b9b;
+	width: 100%;
+	margin:0;
+	padding:19px 16px;
+	text-align: center;
+	border-radius: 0;
+}
+.tab-module a.nav-link.active {
+	border-top: solid 4px #3067b0;
+	color: #5e5d5d;
+	background-color: #f7f7f7; 
+}
