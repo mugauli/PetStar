@@ -2,14 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/menu.css" rel="stylesheet" />
-    <link href="Content/nosotros.css" rel="stylesheet" />
     <link href="Content/main.css" rel="stylesheet" />
     <link href="Content/header.css" rel="stylesheet" />
     <link href="Content/footer.css" rel="stylesheet" />
+    <link href="Content/interior.css" rel="stylesheet" />
+    <link href="Content/modal.css" rel="stylesheet" />
+    <link href="Content/nosotros.css" rel="stylesheet" />
 
     <script src="Scripts/jquery-3.0.0.min.js"></script>
     <script src="Scripts/umg-slider.js"></script>
@@ -18,6 +21,264 @@
 </head>
 </head>
 <body>
+
+    <!-- Start Modal -->
+    <div class="modal pet fade" id="petModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button class="modal-close-btn" data-dismiss="modal" aria-label="Close">
+                <img src="Resources/close.png">
+            </button>
+          <div class="modal-header">
+            <img src="Resources/slider_btn.png" class="d-block mx-auto">
+          </div>
+          <div class="modal-body">
+                <div class="container">
+                    <div class="info-module">
+                        <h2 class="title">Filosofía Institucional</h2>
+                        <div class="green-hr"></div>
+                        <div class="spacer big"></div>
+                    </div>                  
+                </div>
+                <!-- 2 COLS valores -->
+                <div class="container big">
+                    <div class="row">
+                        <div class="col-sm nos-col">
+                            <div class="icon-stamp"></div>
+                            <div class="nos-copy">
+                                <p class="subtitle">Misión</p>
+                                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut lacus vel justo tristique varius at convallis dui. Aenean consequat fermentum varius. Praesent ligula turpis, pharetra nec consectetur a, ultrices vel mi.</p>
+                            </div>
+                            
+                        </div>
+                        <div class="col-sm nos-col">
+                            <div class="icon-stamp"></div>
+                            <div class="nos-copy">
+                                <p class="subtitle">Visión</p>
+                                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut lacus vel justo tristique varius at convallis dui. Aenean consequat fermentum varius. Praesent ligula turpis, pharetra nec consectetur a, ultrices vel mi.</p>
+                            </div>
+                                
+                        </div>
+                    </div>
+                    <div class="spacer big"></div>
+                    <p class="subtitle">Valores</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut lacus vel justo tristique varius at convallis dui. Aenean consequat fermentum varius. Praesent ligula turpis, pharetra nec consectetur a, ultrices vel mi.</p>
+                    <div class="spacer big"></div>
+
+                    <!-- GRID -->
+                    <div class="row">
+                        <div class="col-sm-2 col-md-4 g3i">
+                            <div class="grid-3 blue">
+                                <p class="subtitle">Seguridad</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut lacus vel justo tristique varius at convallis dui.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-4 g3i">
+                                <img src="Resources/grid-1.jpg" class="img-fluid">
+                        </div>
+                        <div class="col-sm-2 col-md-4 g3i">
+                            <div class="grid-3 white">
+                                <p class="subtitle">Honradez</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut lacus vel justo tristique varius at convallis dui.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-sm-2 col-md-4 g3i"> 
+                                <img src="Resources/grid-2.jpg" class="img-fluid">
+                        </div>
+                        <div class="col-sm-2 col-md-4 g3i">
+                            <div class="grid-3 blue">
+                                <p class="subtitle">Responsabilidad</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut lacus vel justo tristique varius at convallis dui.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-4 g3i">
+                            <div class="grid-3 gray">
+                                <p class="subtitle">Servicio</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut lacus vel justo tristique varius at convallis dui.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-sm-2 col-md-4 g3i">
+                            <div class="grid-3 gray">
+                                <p class="subtitle">Confiabilidad</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut lacus vel justo tristique varius at convallis dui.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-4 g3i">
+                            <div class="grid-3 white">
+                                <p class="subtitle">Respeto</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut lacus vel justo tristique varius at convallis dui.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-4 g3i">
+                                <img src="Resources/grid-3.jpg" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="spacer big"></div>
+
+                    <div class="info-module text-left">
+                        <h2 class="title">Código de ética</h2>
+                        <div class="green-hr"></div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit pretium diam. Etiam dignissim porta erat ac consectetur. Donec ultricies at urna at rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</p>
+                        <p><b>Subtitle</b> <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit pretium diam. Etiam dignissim porta erat ac consectetur. Donec ultricies at urna at rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</p>
+                        <p><b>Subtitle</b> <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit pretium diam. Etiam dignissim porta erat ac consectetur. Donec ultricies at urna at rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</p>
+                        <p><b>Subtitle</b> <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit pretium diam. Etiam dignissim porta erat ac consectetur. Donec ultricies at urna at rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</p>
+                        <p><b>Subtitle</b> <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit pretium diam. Etiam dignissim porta erat ac consectetur. Donec ultricies at urna at rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</p>
+                        <p><b>Subtitle</b> <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit pretium diam. Etiam dignissim porta erat ac consectetur. Donec ultricies at urna at rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</p>
+                        <p><b>Subtitle</b> <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit pretium diam. Etiam dignissim porta erat ac consectetur. Donec ultricies at urna at rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</p>
+                        <p><b>Subtitle</b> <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit pretium diam. Etiam dignissim porta erat ac consectetur. Donec ultricies at urna at rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</p>
+                        
+                    </div>
+                </div>
+               
+          </div>
+          <div class="modal-footer">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start Modal -->
+    <div class="modal pet fade" id="petModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button class="modal-close-btn" data-dismiss="modal" aria-label="Close">
+                <img src="Resources/close.png">
+            </button>
+          <div class="modal-header">
+            <img src="Resources/slider_btn.png" class="d-block mx-auto">
+          </div>
+          <div class="modal-body">
+                <div class="container">
+                    <div class="info-module">
+                        <h2 class="title">Historia</h2>
+                        <div class="green-hr"></div>
+                        <div class="spacer big"></div>
+                    </div>
+                </div>
+
+                <div class="container big historia">
+                    <div class="historia-head"></div>
+                    <div class="historia-body">
+                       <div class="hist-mod">
+                            <div class="foto">
+                                <img src="Resources/historia.jpg">
+                                <span class="year right">1995</span>
+                            </div>
+                            <div class="row art">
+                                <div class="col left">
+                                    <span>1995</span>
+                                </div>
+                                <div class="col right">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec tellus turpis. Donec vehicula sapien sem, vel auctor quam tempor a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla placerat nunc quis gravida luctus. Morbi ornare at tellus eget maximus. Suspendisse vestibulum lorem ac vehicula imperdiet. </p>
+                                </div>   
+                            </div>
+
+                        </div>
+
+                        <div class="hist-mod">
+                            <div class="foto">
+                                <img src="Resources/historia.jpg">
+                                <span class="year left">2001</span>
+                            </div>
+                            <div class="row art">
+                                <div class="col left">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec tellus turpis. Donec vehicula sapien sem, vel auctor quam tempor a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla placerat nunc quis gravida luctus. Morbi ornare at tellus eget maximus. Suspendisse vestibulum lorem ac vehicula imperdiet. </p>
+                                </div>
+                                <div class="col right">
+                                    <span>2001</span>
+                                </div>   
+                            </div>
+
+                        </div>
+
+                        <div class="hist-mod">
+                            <div class="foto">
+                                <img src="Resources/historia.jpg">
+                                <span class="year right">2006</span>
+                            </div>
+                            <div class="row art">
+                                <div class="col left">
+                                    <span>2006</span>
+                                </div>
+                                <div class="col right">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec tellus turpis. Donec vehicula sapien sem, vel auctor quam tempor a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla placerat nunc quis gravida luctus. Morbi ornare at tellus eget maximus. Suspendisse vestibulum lorem ac vehicula imperdiet. </p>
+                                </div>   
+                            </div>
+
+                        </div>
+
+                        <div class="hist-mod">
+                            <div class="foto">
+                                <img src="Resources/historia.jpg">
+                                <span class="year left">2009</span>
+                            </div>
+                            <div class="row art">
+                                <div class="col left">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec tellus turpis. Donec vehicula sapien sem, vel auctor quam tempor a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla placerat nunc quis gravida luctus. Morbi ornare at tellus eget maximus. Suspendisse vestibulum lorem ac vehicula imperdiet. </p>
+                                </div>
+                                <div class="col right">
+                                    <span>2009</span>
+                                </div>   
+                            </div>
+
+                        </div>
+
+                        <div class="hist-mod">
+                            <div class="foto">
+                                <img src="Resources/historia.jpg">
+                                <span class="year right">2012</span>
+                            </div>
+                            <div class="row art">
+                                <div class="col left">
+                                    <span>2012</span>
+                                </div>
+                                <div class="col right">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec tellus turpis. Donec vehicula sapien sem, vel auctor quam tempor a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla placerat nunc quis gravida luctus. Morbi ornare at tellus eget maximus. Suspendisse vestibulum lorem ac vehicula imperdiet. </p>
+                                </div>   
+                            </div>
+
+                        </div>
+
+                        <div class="hist-mod">
+                            <div class="foto">
+                                <img src="Resources/historia.jpg">
+                                <span class="year left">2018</span>
+                            </div>
+                            <div class="row art">
+                                <div class="col left">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec tellus turpis. Donec vehicula sapien sem, vel auctor quam tempor a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla placerat nunc quis gravida luctus. Morbi ornare at tellus eget maximus. Suspendisse vestibulum lorem ac vehicula imperdiet. </p>
+                                </div>
+                                <div class="col right">
+                                    <span>2018</span>
+                                </div>   
+                            </div>
+
+                        </div> 
+                    </div>
+                        
+                    
+                </div>
+          </div>
+          <div class="modal-footer">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <form id="form1" runat="server">
         <div id="containerStatic">
             <div id="containerMain">
@@ -212,8 +473,8 @@
                                     Nosotros
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Historia</a>
-                                    <a class="dropdown-item" href="#">Ética y Filosofía Institucional </a>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#petModal2">Historia</a>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#petModal">Ética y Filosofía Institucional </a>
                                     <a class="dropdown-item" href="#">Certificaciones</a>
                                     <a class="dropdown-item" href="#">Accionistas</a>
                                     <a class="dropdown-item" href="#">Educación Ambiental</a>

@@ -31,6 +31,101 @@
     width: 100%;
     
 }
+.nos-col{
+    display: flex;
+}
+.icon-stamp{
+    min-width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color:#fff;
+    margin-right: 25px;
+}
+.container.big{
+    max-width: 980px;
+}
+.nos-copy .copy {
+    padding-right: 20px;
+}
+p.subtitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
 .conMsg > div {
     margin-bottom: 10%;
+}
+.grid-3 {
+    height: 175px;
+    color: #fff;
+    padding: 35px 50px;
+}
+.grid-3 img {
+    width: 100%;
+    object-fit: cover;
+}
+.grid-3.white {
+    background-color: #fff;
+}
+.grid-3 p {
+    font-size: .8rem;
+}
+.grid-3 p.subtitle{
+   margin-bottom: 2px;
+   font-size: 1rem;
+} 
+.grid-3.white p.subtitle{
+    color: #3067b0;   
+}
+.grid-3.white p{
+    color: #5e5d5d;   
+}
+.grid-3.blue {
+    background-color: #3067b0;
+    
+}
+.grid-3.gray{
+    background-color: #9b9b9b;
+
+}
+.g3i {
+    padding: 6px;
+}
+.historia-body {
+    background-image: url(../Resources/line.gif);
+    background-position: top;
+    background-repeat: repeat-y;
+}
+.historia .foto {
+    width: 113px;
+    margin: 0 auto;
+    position: relative;
+}
+.historia .year {
+    position: absolute;
+    top: 48px;
+    color: #346ab1;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.historia .year.right {
+    right: -70px;
+}
+.historia .year.left{
+    left: -70px;
+}
+.historia .art{
+    margin-top: -32px;
+}
+.historia .col.right {
+    padding-left: 85px;
+    text-align: left;
+}
+.historia .col.left {
+    padding-right: 85px;
+    text-align: right;
+}
+.historia .col.left span, .historia .col.right span{
+    font-size: 7rem;
+    color: #e3e3e3;
+    font-weight: bold;
 }
