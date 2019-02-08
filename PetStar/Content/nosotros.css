@@ -129,3 +129,27 @@ p.subtitle {
     color: #e3e3e3;
     font-weight: bold;
 }
+.cert-name {
+    color: #3369b1;
+}
+.col-cert {
+    width: 33%;
+    display: inline-block;
+    padding:15px 30px;
+}
+#certSlide img {
+    margin-bottom: 20px
+}
+
+#certSlide .carousel-indicators li{
+    background-color: #ccc;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+#certSlide .carousel-indicators li.active{
+    background-color: #4fa333;
+}
+#certSlide .carousel-control-next-icon{
+    background-image: url("../Resources/right.png")
+}

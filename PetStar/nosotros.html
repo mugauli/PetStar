@@ -278,6 +278,115 @@
       </div>
     </div>
 
+    <!-- Start Modal -->
+    <div class="modal pet fade" id="petModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button class="modal-close-btn" data-dismiss="modal" aria-label="Close">
+                <img src="Resources/close.png">
+            </button>
+          <div class="modal-header">
+            <img src="Resources/slider_btn.png" class="d-block mx-auto">
+          </div>
+          <div class="modal-body">
+                <div class="container big">
+                    <div class="info-module">
+                        <h2 class="title">Certificaciones</h2>
+                        <div class="green-hr"></div>
+                        <div class="spacer big"></div>
+                        
+                        <div id="certSlide" class="carousel slide"  data-ride="carousel">
+                          <ol class="carousel-indicators">
+                            <li data-target="#certSlide" data-slide-to="0" class="active"></li>
+                            <li data-target="#certSlide" data-slide-to="1"></li>
+                            <li data-target="#certSlide" data-slide-to="2"></li>
+                          </ol>
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="col-cert">
+                                    <img class="d-block mx-auto" src="Resources/certificate-1.gif" alt="First slide">
+                                    <p><span class="cert-name">Calidad</span><br>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur tellus
+                                  </p>
+                                </div>
+                                <div class="col-cert">
+                                    <img class="d-block mx-auto" src="Resources/certificate-2.gif" alt="First slide">
+                                    <p><span class="cert-name">Energia</span><br>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur tellus
+                                  </p>
+                                </div>
+                                <div class="col-cert">
+                                    <img class="d-block mx-auto" src="Resources/certificate-3.gif" alt="First slide">
+                                    <p><span class="cert-name">Medio Ambiente</span><br>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur tellus 
+                                  </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item ">
+                               <div class="col-cert">
+                                    <img class="d-block mx-auto" src="Resources/certificate-1.gif" alt="First slide">
+                                    <p><span class="cert-name">Calidad</span><br>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur tellus
+                                  </p>
+                                </div>
+                                <div class="col-cert">
+                                    <img class="d-block mx-auto" src="Resources/certificate-2.gif" alt="First slide">
+                                    <p><span class="cert-name">Energia</span><br>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur tellus
+                                  </p>
+                                </div>
+                                <div class="col-cert">
+                                    <img class="d-block mx-auto" src="Resources/certificate-3.gif" alt="First slide">
+                                    <p><span class="cert-name">Medio Ambiente</span><br>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur tellus 
+                                  </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item ">
+                                <div class="col-cert">
+                                    <img class="d-block mx-auto" src="Resources/certificate-1.gif" alt="First slide">
+                                    <p><span class="cert-name">Calidad</span><br>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur tellus
+                                  </p>
+                                </div>
+                                <div class="col-cert">
+                                    <img class="d-block mx-auto" src="Resources/certificate-2.gif" alt="First slide">
+                                    <p><span class="cert-name">Energia</span><br>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur tellus
+                                  </p>
+                                </div>
+                                <div class="col-cert">
+                                    <img class="d-block mx-auto" src="Resources/certificate-3.gif" alt="First slide">
+                                    <p><span class="cert-name">Medio Ambiente</span><br>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur tellus 
+                                  </p>
+                                </div>
+                            </div>
+                            
+                          </div>
+                          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div>
+
+
+                    </div>
+                    
+                  
+                </div>
+          </div>
+          <div class="modal-footer">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <form id="form1" runat="server">
         <div id="containerStatic">
@@ -475,7 +584,7 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#petModal2">Historia</a>
                                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#petModal">Ética y Filosofía Institucional </a>
-                                    <a class="dropdown-item" href="#">Certificaciones</a>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#petModal3">Certificaciones</a>
                                     <a class="dropdown-item" href="#">Accionistas</a>
                                     <a class="dropdown-item" href="#">Educación Ambiental</a>
                                 </div>
