@@ -93,3 +93,37 @@
     .dropdown-menu a {
     }
 }
+
+#contModales {
+    position: fixed;
+    bottom: 61px;
+    width: 100%;
+    z-index: 1000;
+    background: #4FA333;
+    height: 38px;
+}
+
+    #contModales ul {
+        display: -moz-box; /* Firefox */
+        display: -webkit-box; /* Safari and Chrome */
+        display: -ms-flexbox; /* Internet Explorer 10 */
+        display: flex;
+        display: -webkit-flex; /* Safari 7 */
+        min-width: 9vw;
+        list-style: none;
+    }
+
+    #contModales li {
+        display: -moz-box; /* Firefox */
+        display: -webkit-box; /* Safari and Chrome */
+        display: -ms-flexbox; /* Internet Explorer 10 */
+        display: flex;
+        display: -webkit-flex; /* Safari 7 */
+    }
+
+    #contModales a {
+        margin: auto;
+    }
+
+        #contModales a:hover {
+        }
