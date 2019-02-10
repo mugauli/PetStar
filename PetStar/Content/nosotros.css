@@ -153,3 +153,63 @@ p.subtitle {
 #certSlide .carousel-control-next-icon{
     background-image: url("../Resources/right.png")
 }
+.namecards{
+    display: inline-block;
+    width: 24.5%;
+    text-align: left;
+}
+.namecards .card {
+    border:none;
+    margin: 10px auto;
+}
+.namecards .card a{
+    
+    transition: all .2s ease-in-out
+}
+.namecards .card a.collapsed{
+        filter: grayscale(100);
+        color: #ccc;
+        opacity: .5
+}
+.detail-maps {
+    width: 75%;
+    display: inline-block;
+    border: 1px solid #eaeaea;
+    vertical-align: top;
+    padding: 30px;
+    font-size:.8rem;
+}
+.namecards .card-header{
+    background-color: #fff;
+
+}
+.namecards .card a .percentage  {
+    float: right;
+    margin-top: 10px;
+    color: #50a335;
+}
+.namecards .card a.collapsed .percentage  {
+    filter: grayscale(100);
+}
+.acc-text, .acc-img {
+    width: 49.5%;
+    display:inline-block;
+    float: left;
+}
+.acc-img{
+    float: right;
+}
+.acc-text {
+    text-align: left;
+    padding-left: 15px;
+}
+.acc-text p.subtitle {
+    color: #3067b0;
+    margin-bottom: 20px;
+}
+.accionistas-accordion .accordion {
+    vertical-align: top;
+}
+.acc-icons {
+    margin: 20px 0;
+}
