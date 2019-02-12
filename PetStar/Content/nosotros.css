@@ -213,3 +213,26 @@ p.subtitle {
 .acc-icons {
     margin: 20px 0;
 }
+
+#accordionAccMob {
+    display: none;
+}
+
+#accordionAccMob .namecards, #accordionAccMob .detail-maps {
+    display: block;
+    width: 100%;
+}
+#accordionAccMob .acc-text,#accordionAccMob .acc-img {
+    width: 100%;
+    display:block;
+    float: none;
+}
+
+@media (max-width: 767px) {
+    #accordionAccDesk {
+        display: none;
+    }
+    #accordionAccMob {
+        display: block;
+    }
+}

@@ -79,3 +79,16 @@
 	color: #5e5d5d;
 	background-color: #f7f7f7; 
 }
+.tab-content .col-sm{
+	width: 49.5%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#carouselValSol1 .carousel-control-next, #carouselValSol1 .carousel-control-prev, 
+#carouselValSol2 .carousel-control-next, #carouselValSol2 .carousel-control-prev {
+	height: 64px;
+	width: 35px;
+	background-color: rgba(0,0,0,.5);
+	top:39%;
+}
