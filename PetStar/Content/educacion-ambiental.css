@@ -46,3 +46,20 @@
 	padding: 65px 10px;
 	text-align: center;
 }
+#carouselEd .carousel-control-next, #carouselEd .carousel-control-prev {
+	height: 64px;
+	width: 35px;
+	background-color: rgba(0,0,0,.8);
+	top:45%;
+}
+#carouselEd .carousel-indicators li{
+	width: 15px;
+	height: 15px;
+	background-color: #fff;
+	border-radius: 50%;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+#carouselEd .carousel-indicators li.active {
+	background-color: #4fa333;
+}

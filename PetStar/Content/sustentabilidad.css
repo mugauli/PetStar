@@ -27,6 +27,22 @@
 	margin-bottom: 5px;
 	
 }
+.alert-light{
+	text-align: left;
+	margin-bottom: 0;
+	padding:20px;
+}
+.alert-light p {
+	margin:0;
+	max-width: 65%;
+	color: #4fa333;
+	display: inline-block;
+	font-size: 1.2rem;
+}
+.alert-light button {
+	float: right;
+
+}
 .headline {
 	font-weight: bold;
 	margin-bottom: 45px;

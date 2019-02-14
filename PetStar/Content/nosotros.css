@@ -129,6 +129,7 @@ p.subtitle {
     color: #e3e3e3;
     font-weight: bold;
 }
+
 .cert-name {
     color: #3369b1;
 }
@@ -226,6 +227,39 @@ p.subtitle {
     width: 100%;
     display:block;
     float: none;
+}
+@media (max-width: 700px){
+    .historia .col.left span, .historia .col.right span{
+        display: none;
+    }
+    .hiddable {
+        display: none;
+    }
+    .historia .art {
+        margin: 0 0 15px;
+        padding: 15px;
+    }
+    .historia .col.left, .historia .col.right {
+        padding: 15px;
+        text-align: left;
+    }
+    .historia-body {
+        background-image: none
+    }
+    .historia .year.left {
+        left: auto;
+        right: -40px;
+    }
+    .historia img{
+        width: 80px;
+    }
+    .nos-col{
+        display: block;
+    }
+    .nos-copy{
+        width: 100%;
+        display: block;
+    }
 }
 
 @media (max-width: 767px) {
