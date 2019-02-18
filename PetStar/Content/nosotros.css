@@ -90,6 +90,13 @@ p.subtitle {
 .g3i {
     padding: 6px;
 }
+@media (max-width: 700px) {
+    .icon-stamp {
+        width: 95px;
+        height: 95px;
+        margin: 0 auto;
+    }
+}
 .historia-body {
     background-image: url(../Resources/line.gif);
     background-position: top;
@@ -134,10 +141,35 @@ p.subtitle {
     color: #3369b1;
 }
 .col-cert {
-    width: 33%;
+    width:33%;
+    width:100%;
     display: inline-block;
     padding:15px 30px;
 }
+
+.owl-nav {
+    position:absolute;
+    top: 100px;
+    width: 100%;
+}
+.owl-carousel .owl-nav button.owl-prev {
+    
+    float: left;
+    
+}
+.owl-carousel .owl-nav button.owl-next {
+    
+    float: right; 
+    width: 17px;
+    height: 32px;
+}
+.col-cert img {
+    margin-bottom: 20px
+}
+.owl-carousel .owl-item img {
+    width: auto
+}
+
 #certSlide img {
     margin-bottom: 20px
 }
@@ -246,9 +278,11 @@ p.subtitle {
     .historia-body {
         background-image: none
     }
+    .historia .year.right, 
     .historia .year.left {
         left: auto;
         right: -40px;
+        top: 30px;
     }
     .historia img{
         width: 80px;
