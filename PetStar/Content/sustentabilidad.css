@@ -100,6 +100,9 @@
 	display: inline-block;
 	vertical-align: top;
 }
+.val-sol .slider-wrapper.two{
+	float: right;
+}
 
 #carouselValSol1 .carousel-control-next, #carouselValSol1 .carousel-control-prev, 
 #carouselValSol2 .carousel-control-next, #carouselValSol2 .carousel-control-prev {
@@ -107,4 +110,38 @@
 	width: 35px;
 	background-color: rgba(0,0,0,.5);
 	top:39%;
+}
+.tab-module .col-sm.image {
+	float: right;
+}
+@media (max-width: 888px){
+	.val-sol .slider-wrapper{
+		width: 100%;
+		height: 200px;
+		
+	}
+	 .text-wrapper {
+		width: 100%
+	}
+	.val-sol .slider-wrapper img{
+		height: 200px;
+		object-fit: cover;
+	}
+	#carouselValSol1 .carousel-control-next, #carouselValSol1 .carousel-control-prev, 
+	#carouselValSol2 .carousel-control-next, #carouselValSol2 .carousel-control-prev{
+		top:30%;
+	}
+	.val-sol .slider-wrapper.two{
+		float: left;
+	}
+	.tab-module .col-sm.image img{
+		width: 100%;
+		height:283px;
+	}
+	.tab-module .col-sm.image, .tab-module .col-sm {
+		float: left;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	
 }

@@ -169,6 +169,19 @@ p.subtitle {
 .owl-carousel .owl-item img {
     width: auto
 }
+.owl-dots {
+    width: 100%
+}
+.owl-dots .owl-dot {
+    background-color: #ccc !important;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 4px;
+}
+.owl-dots .owl-dot.active {
+    background-color: #4fa333 !important; 
+}
 
 #certSlide img {
     margin-bottom: 20px
@@ -179,6 +192,7 @@ p.subtitle {
     width: 8px;
     height: 8px;
     border-radius: 50%;
+
 }
 #certSlide .carousel-indicators li.active{
     background-color: #4fa333;
