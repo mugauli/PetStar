@@ -15,6 +15,11 @@
     <script src="Scripts/umg-slider.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
 
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC6AHP2QSNFfyXrQhFMPexr299ylKcRoI&callback=initMap"></script>
+    <script src="Scripts/contacto.js"></script>
+
+
 </head>
 </head>
 <body>
@@ -138,12 +143,12 @@
                                 <div class="green-hr"></div>
                                 <div class="form-group col-12">
                                     <div class="col-12 col-md-6 col-lg-4" style="margin:auto">
-                                        <select class="form-control" id="sltAsunto">
-                                            <option>Ofinicas centrales Petstar</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                        <select class="form-control" id="sltSucursal">
+                                            <option value="1">Ofinicas centrales Petstar 1</option>
+                                            <option value="2">Ofinicas centrales Petstar 2</option>
+                                            <option value="3">Ofinicas centrales Petstar 3</option>
+                                            <option value="4">Ofinicas centrales Petstar 4</option>
+                                            <option value="5">Ofinicas centrales Petstar 5</option>
                                         </select>
                                     </div>
                                 </div>
@@ -151,20 +156,23 @@
                                     <!--The div element for the map -->
                                     <div id="map"></div>
                                     <script>
-                                        // Initialize and add the map
-                                        function initMap() {
-                                            // The location of Uluru
-                                            var uluru = { lat: -25.344, lng: 131.036 };
-                                            // The map, centered at Uluru
-                                            var map = new google.maps.Map(
-                                                document.getElementById('map'), { zoom: 4, center: uluru });
-                                            // The marker, positioned at Uluru
-                                            var marker = new google.maps.Marker({ position: uluru, map: map });
-                                        }
+                                        var dict = {
+                                            1: "48.1293954,11.556663",
+                                            2: "48.1293954,12.556663",
+                                            3: "48.1293954,13.556663",
+                                            4: "48.1293954,14.556663",
+                                            5: "48.1293954,15.556663",
+                                        };
+
+                                        var dictInfo = {
+                                            1: "48.1293954,11.556663",
+                                            2: "48.1293954,12.556663",
+                                            3: "48.1293954,13.556663",
+                                            4: "48.1293954,14.556663",
+                                            5: "48.1293954,15.556663",
+                                        };
                                     </script>
-                                    <script async defer
-                                            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC6AHP2QSNFfyXrQhFMPexr299ylKcRoI&callback=initMap">
-                                    </script>
+                                    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC6AHP2QSNFfyXrQhFMPexr299ylKcRoI&callback=initMap"></script>
                                 </div>
                             </div>
 
