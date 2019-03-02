@@ -318,3 +318,7 @@ p.subtitle {
         display: block;
     }
 }
+
+.card-header a img {
+    max-width: 95px;
+}
