@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PetstarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="cmsLogError">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Message" Type="varchar(max)" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cmsMedia">
+          <Key>
+            <PropertyRef Name="versionId" />
+          </Key>
+          <Property Name="nodeId" Type="int" Nullable="false" />
+          <Property Name="versionId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="mediaPath" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="cmsNoticias">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdUmbraco" Type="int" Nullable="false" />
+          <Property Name="IdParent" Type="int" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="Titulo" Type="varchar(max)" Nullable="false" />
+          <Property Name="Informacion" Type="varchar(max)" Nullable="false" />
+          <Property Name="Link" Type="varchar(max)" />
+          <Property Name="TextoFecha" Type="varchar(max)" />
+          <Property Name="Imagen" Type="varchar(max)" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+        </EntityType>
+        <Function Name="sp_NewsPagination" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="page" Type="int" Mode="In" />
+          <Parameter Name="size" Type="int" Mode="In" />
+          <Parameter Name="parent" Type="int" Mode="In" />
+          <Parameter Name="sort" Type="nvarchar" Mode="In" />
+          <Parameter Name="param" Type="nvarchar" Mode="In" />
+          <Parameter Name="dateI" Type="datetime" Mode="In" />
+          <Parameter Name="dateF" Type="datetime" Mode="In" />
+          <Parameter Name="filterDate" Type="bit" Mode="In" />
+          <Parameter Name="totalrow" Type="int" Mode="InOut" />
+        </Function>
+        <EntityContainer Name="PetstarModelStoreContainer">
+          <EntitySet Name="cmsLogError" EntityType="Self.cmsLogError" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cmsMedia" EntityType="Self.cmsMedia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cmsNoticias" EntityType="Self.cmsNoticias" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PetstarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="PetstarEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="cmsNoticias" EntityType="PetstarModel.cmsNoticias" />
+          <EntitySet Name="cmsLogError" EntityType="PetstarModel.cmsLogError" />
+          <EntitySet Name="cmsMedia" EntityType="PetstarModel.cmsMedia" />
+          <FunctionImport Name="sp_NewsPagination" ReturnType="Collection(PetstarModel.sp_NewsPagination_Result)">
+            <Parameter Name="page" Mode="In" Type="Int32" />
+            <Parameter Name="size" Mode="In" Type="Int32" />
+            <Parameter Name="parent" Mode="In" Type="Int32" />
+            <Parameter Name="sort" Mode="In" Type="String" />
+            <Parameter Name="param" Mode="In" Type="String" />
+            <Parameter Name="dateI" Mode="In" Type="DateTime" />
+            <Parameter Name="dateF" Mode="In" Type="DateTime" />
+            <Parameter Name="filterDate" Mode="In" Type="Boolean" />
+            <Parameter Name="totalrow" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="cmsNoticias">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdUmbraco" Type="Int32" Nullable="false" />
+          <Property Name="IdParent" Type="Int32" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+          <Property Name="Titulo" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Informacion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TextoFecha" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Imagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cmsLogError">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Message" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="cmsMedia">
+          <Key>
+            <PropertyRef Name="versionId" />
+          </Key>
+          <Property Name="nodeId" Type="Int32" Nullable="false" />
+          <Property Name="versionId" Type="Guid" Nullable="false" />
+          <Property Name="mediaPath" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <ComplexType Name="sp_NewsPagination_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="IdUmbraco" Nullable="false" />
+          <Property Type="Int32" Name="IdParent" Nullable="true" />
+          <Property Type="DateTime" Name="Fecha" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Titulo" Nullable="false" />
+          <Property Type="String" Name="Informacion" Nullable="false" />
+          <Property Type="String" Name="Link" Nullable="true" />
+          <Property Type="String" Name="TextoFecha" Nullable="true" />
+          <Property Type="String" Name="Imagen" Nullable="true" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="Int64" Name="Index" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PetstarModelStoreContainer" CdmEntityContainer="PetstarEntities">
+          <EntitySetMapping Name="cmsNoticias">
+            <EntityTypeMapping TypeName="PetstarModel.cmsNoticias">
+              <MappingFragment StoreEntitySet="cmsNoticias">
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+                <ScalarProperty Name="TextoFecha" ColumnName="TextoFecha" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Informacion" ColumnName="Informacion" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="IdParent" ColumnName="IdParent" />
+                <ScalarProperty Name="IdUmbraco" ColumnName="IdUmbraco" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cmsLogError">
+            <EntityTypeMapping TypeName="PetstarModel.cmsLogError">
+              <MappingFragment StoreEntitySet="cmsLogError">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cmsMedia">
+            <EntityTypeMapping TypeName="PetstarModel.cmsMedia">
+              <MappingFragment StoreEntitySet="cmsMedia">
+                <ScalarProperty Name="mediaPath" ColumnName="mediaPath" />
+                <ScalarProperty Name="versionId" ColumnName="versionId" />
+                <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_NewsPagination" FunctionName="PetstarModel.Store.sp_NewsPagination">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PetstarModel.sp_NewsPagination_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="IdUmbraco" ColumnName="IdUmbraco" />
+                <ScalarProperty Name="IdParent" ColumnName="IdParent" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="Informacion" ColumnName="Informacion" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="TextoFecha" ColumnName="TextoFecha" />
+                <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Index" ColumnName="Index" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
