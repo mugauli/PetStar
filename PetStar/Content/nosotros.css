@@ -31,6 +31,294 @@
     width: 100%;
     
 }
+.nos-col{
+    display: flex;
+}
+.icon-stamp{
+    min-width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color:#fff;
+    margin-right: 25px;
+}
+.container.big{
+    max-width: 980px;
+}
+.nos-copy .copy {
+    padding-right: 20px;
+}
+p.subtitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
 .conMsg > div {
     margin-bottom: 10%;
+}
+.grid-3 {
+    height: 175px;
+    color: #fff;
+    padding: 35px 50px;
+}
+.grid-3 img {
+    width: 100%;
+    object-fit: cover;
+}
+.grid-3.white {
+    background-color: #fff;
+}
+.grid-3 p {
+    font-size: .8rem;
+}
+.grid-3 p.subtitle{
+   margin-bottom: 2px;
+   font-size: 1rem;
+} 
+.grid-3.white p.subtitle{
+    color: #3067b0;   
+}
+.grid-3.white p{
+    color: #5e5d5d;   
+}
+.grid-3.blue {
+    background-color: #3067b0;
+    
+}
+.grid-3.gray{
+    background-color: #9b9b9b;
+
+}
+.g3i {
+    padding: 6px;
+}
+@media (max-width: 700px) {
+    .icon-stamp {
+        width: 95px;
+        height: 95px;
+        margin: 0 auto;
+    }
+}
+.historia-body {
+    background-image: url(../Resources/line.gif);
+    background-position: top;
+    background-repeat: repeat-y;
+}
+.historia .foto {
+    width: 113px;
+    margin: 0 auto;
+    position: relative;
+}
+.historia .year {
+    position: absolute;
+    top: 48px;
+    color: #346ab1;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.historia .year.right {
+    right: -70px;
+}
+.historia .year.left{
+    left: -70px;
+}
+.historia .art{
+    margin-top: -32px;
+}
+.historia .col.right {
+    padding-left: 85px;
+    text-align: left;
+}
+.historia .col.left {
+    padding-right: 85px;
+    text-align: right;
+}
+.historia .col.left span, .historia .col.right span{
+    font-size: 7rem;
+    color: #e3e3e3;
+    font-weight: bold;
+}
+
+.cert-name {
+    color: #3369b1;
+}
+.col-cert {
+    width:33%;
+    width:100%;
+    display: inline-block;
+    padding:15px 30px;
+}
+
+.owl-nav {
+    position:absolute;
+    top: 100px;
+    width: 100%;
+}
+.owl-carousel .owl-nav button.owl-prev {
+    
+    float: left;
+    
+}
+.owl-carousel .owl-nav button.owl-next {
+    
+    float: right; 
+    width: 17px;
+    height: 32px;
+}
+.col-cert img {
+    margin-bottom: 20px
+}
+.owl-carousel .owl-item img {
+    width: auto
+}
+.owl-dots {
+    width: 100%
+}
+.owl-dots .owl-dot {
+    background-color: #ccc !important;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 4px;
+}
+.owl-dots .owl-dot.active {
+    background-color: #4fa333 !important; 
+}
+
+#certSlide img {
+    margin-bottom: 20px
+}
+
+#certSlide .carousel-indicators li{
+    background-color: #ccc;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+}
+#certSlide .carousel-indicators li.active{
+    background-color: #4fa333;
+}
+#certSlide .carousel-control-next-icon{
+    background-image: url("../Resources/right.png")
+}
+.namecards{
+    display: inline-block;
+    width: 24.5%;
+    text-align: left;
+}
+.namecards .card {
+    border:none;
+    margin: 10px auto;
+}
+.namecards .card a{
+    
+    transition: all .2s ease-in-out
+}
+.namecards .card a.collapsed{
+        filter: grayscale(100);
+        color: #ccc;
+        opacity: .5
+}
+.detail-maps {
+    width: 75%;
+    display: inline-block;
+    border: 1px solid #eaeaea;
+    vertical-align: top;
+    padding: 30px;
+    font-size:.8rem;
+}
+.namecards .card-header{
+    background-color: #fff;
+
+}
+.namecards .card a .percentage  {
+    float: right;
+    margin-top: 10px;
+    color: #50a335;
+}
+.namecards .card a.collapsed .percentage  {
+    filter: grayscale(100);
+}
+.acc-text, .acc-img {
+    width: 49.5%;
+    display:inline-block;
+    float: left;
+}
+.acc-img{
+    float: right;
+}
+.acc-text {
+    text-align: left;
+    padding-left: 15px;
+}
+.acc-text p.subtitle {
+    color: #3067b0;
+    margin-bottom: 20px;
+}
+.accionistas-accordion .accordion {
+    vertical-align: top;
+}
+.acc-icons {
+    margin: 20px 0;
+}
+
+#accordionAccMob {
+    display: none;
+}
+
+#accordionAccMob .namecards, #accordionAccMob .detail-maps {
+    display: block;
+    width: 100%;
+}
+#accordionAccMob .acc-text,#accordionAccMob .acc-img {
+    width: 100%;
+    display:block;
+    float: none;
+}
+@media (max-width: 700px){
+    .historia .col.left span, .historia .col.right span{
+        display: none;
+    }
+    .hiddable {
+        display: none;
+    }
+    .historia .art {
+        margin: 0 0 15px;
+        padding: 15px;
+    }
+    .historia .col.left, .historia .col.right {
+        padding: 15px;
+        text-align: left;
+    }
+    .historia-body {
+        background-image: none
+    }
+    .historia .year.right, 
+    .historia .year.left {
+        left: auto;
+        right: -40px;
+        top: 30px;
+    }
+    .historia img{
+        width: 80px;
+    }
+    .nos-col{
+        display: block;
+    }
+    .nos-copy{
+        width: 100%;
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    #accordionAccDesk {
+        display: none;
+    }
+    #accordionAccMob {
+        display: block;
+    }
+}
+
+.card-header a img {
+    max-width: 95px;
 }

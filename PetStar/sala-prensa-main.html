@@ -10,6 +10,8 @@
     <link href="Content/footer.css" rel="stylesheet" />
     <link href="Content/main.css" rel="stylesheet" />
     <link href="Content/interior.css" rel="stylesheet" />
+    <link href="Content/modal.css" rel="stylesheet" />
+    <link href="Content/prensa.css" rel="stylesheet" />
 
     <script src="Scripts/jquery-3.0.0.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
@@ -17,6 +19,181 @@
     <!--<script src="Scripts/popper.js"></script>-->
 </head>
 <body>
+
+    <!-- Start Modal -->
+    <div class="modal pet fade" id="petModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button class="modal-close-btn" data-dismiss="modal" aria-label="Close">
+                <img src="Resources/close.png">
+            </button>
+          <div class="modal-header">
+            <img src="Resources/slider_btn.png" class="d-block mx-auto">
+          </div>
+          <div class="modal-body">
+                <div class="container">
+                    <div class="info-module">
+                        <h2 class="title">Petstar en los medios</h2>
+                        <div class="green-hr"></div>
+
+                        <div class="filters row">
+                            <div class="col">
+                                <select class="form-control form-control-sm" id="dateSelect">
+                                <option>Filtrar por fecha </option>
+                            </select>
+                            </div>
+                            <div class="col">
+                                <input type="text" name="" placeholder="Buscar..." class="form-control form-control-sm">
+                            </div>
+                            <div class="col">
+                                <div class="paginador">
+                                    <div class="btn-toolbar paginador" role="toolbar" aria-label="Toolbar with button groups">
+                                      <div class="btn-group btn-group-sm mr" role="group" aria-label="First group">
+                                        <button type="button" class="btn btn-outline-secondary"><<</button>
+                                        <button type="button" class="btn btn-outline-secondary">1</button>
+                                        <button type="button" class="btn btn-outline-secondary">>></button>
+                                        <span class="pag-tot">de 20</span> 
+                                      </div>
+                                    </div>
+
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                        <div class="media-notes">
+                            <div class="row">
+                                <div class="col-sm-6 m-note"> 
+                                    <div class="note-img">
+                                        <img src="Resources/nota.jpg" class="img-fluid">
+                                    </div>
+                                    <div class="note-content">
+                                        <p class="art-title">Titulo de la nota</p>
+                                        <p class="art-date">14 Febrero 2019 | Medio</p>
+                                        <p class="art-abstract">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac est condimentum, dapibus nisl vel, cursus libero. Aliquam rutrum risus quis odio auctor volutpat ut sollicitudin justo. Sed id metus mi.</p>
+                                        <div class="note-buttons">
+                                            <img src="Resources/pdf.png" class="download-btn"> Leer nota completa 
+                                            <img src="Resources/shared.png" class="share-btn">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 m-note"> 
+                                    <div class="note-img">
+                                        <img src="Resources/nota.jpg" class="img-fluid">
+                                    </div>
+                                    <div class="note-content">
+                                        <p class="art-title">Titulo de la nota</p>
+                                        <p class="art-date">14 Febrero 2019 | Medio</p>
+                                        <p class="art-abstract">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac est condimentum, dapibus nisl vel, cursus libero. Aliquam rutrum risus quis odio auctor volutpat ut sollicitudin justo. Sed id metus mi.</p>
+                                        <div class="note-buttons">
+                                            <img src="Resources/pdf.png" class="download-btn"> Leer nota completa 
+                                            <img src="Resources/shared.png" class="share-btn">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6 m-note"> 
+                                    <div class="note-img">
+                                        <img src="Resources/nota.jpg" class="img-fluid">
+                                    </div>
+                                    <div class="note-content">
+                                        <p class="art-title">Titulo de la nota</p>
+                                        <p class="art-date">14 Febrero 2019 | Medio</p>
+                                        <p class="art-abstract">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac est condimentum, dapibus nisl vel, cursus libero. Aliquam rutrum risus quis odio auctor volutpat ut sollicitudin justo. Sed id metus mi.</p>
+                                        <div class="note-buttons">
+                                            <img src="Resources/pdf.png" class="download-btn"> Leer nota completa 
+                                            <img src="Resources/shared.png" class="share-btn">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 m-note"> 
+                                    <div class="note-img">
+                                        <img src="Resources/nota.jpg" class="img-fluid">
+                                    </div>
+                                    <div class="note-content">
+                                        <p class="art-title">Titulo de la nota</p>
+                                        <p class="art-date">14 Febrero 2019 | Medio</p>
+                                        <p class="art-abstract">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac est condimentum, dapibus nisl vel, cursus libero. Aliquam rutrum risus quis odio auctor volutpat ut sollicitudin justo. Sed id metus mi.</p>
+                                        <div class="note-buttons">
+                                            <img src="Resources/pdf.png" class="download-btn"> Leer nota completa 
+                                            <img src="Resources/shared.png" class="share-btn">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6 m-note"> 
+                                    <div class="note-img">
+                                        <img src="Resources/nota.jpg" class="img-fluid">
+                                    </div>
+                                    <div class="note-content">
+                                        <p class="art-title">Titulo de la nota</p>
+                                        <p class="art-date">14 Febrero 2019 | Medio</p>
+                                        <p class="art-abstract">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac est condimentum, dapibus nisl vel, cursus libero. Aliquam rutrum risus quis odio auctor volutpat ut sollicitudin justo. Sed id metus mi.</p>
+                                        <div class="note-buttons">
+                                            <img src="Resources/pdf.png" class="download-btn"> Leer nota completa 
+                                            <img src="Resources/shared.png" class="share-btn">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 m-note"> 
+                                    <div class="note-img">
+                                        <img src="Resources/nota.jpg" class="img-fluid">
+                                    </div>
+                                    <div class="note-content">
+                                        <p class="art-title">Titulo de la nota</p>
+                                        <p class="art-date">14 Febrero 2019 | Medio</p>
+                                        <p class="art-abstract">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac est condimentum, dapibus nisl vel, cursus libero. Aliquam rutrum risus quis odio auctor volutpat ut sollicitudin justo. Sed id metus mi.</p>
+                                        <div class="note-buttons">
+                                            <img src="Resources/pdf.png" class="download-btn"> Leer nota completa 
+                                            <img src="Resources/shared.png" class="share-btn">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                                
+                            
+                        </div>
+                        <div>
+                            <div class="paginador">
+                                <div class="btn-toolbar paginador" role="toolbar" aria-label="Toolbar with button groups">
+                                  <div class="btn-group btn-group-sm mr" role="group" aria-label="First group">
+                                    <button type="button" class="btn btn-outline-secondary"><<</button>
+                                    <button type="button" class="btn btn-outline-secondary">1</button>
+                                    <button type="button" class="btn btn-outline-secondary">>></button>
+                                    <span class="pag-tot">de 20</span> 
+                                  </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                  <div class="spacer big"></div>
+                </div>
+          </div>
+          <div class="modal-footer">
+            
+          </div>
+        </div>
+      </div>
+    </div>
     <form id="form1" runat="server">
         <div id="containerStatic">
             <div id="containerMain">
@@ -192,7 +369,7 @@
                                     Sala de prensa
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">PetStar en los medios</a>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#petModal">PetStar en los medios</a>
                                     <a class="dropdown-item" href="#">Noticias petstar</a>
                                     <a class="dropdown-item" href="#">Entrevistas y conferencias</a>
                                     <a class="dropdown-item" href="#">Accionistas</a>
