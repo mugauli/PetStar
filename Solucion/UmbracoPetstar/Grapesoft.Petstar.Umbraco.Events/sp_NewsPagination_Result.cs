@@ -23,6 +23,7 @@ namespace Grapesoft.Petstar.Events
         public string TextoFecha { get; set; }
         public string Imagen { get; set; }
         public bool Active { get; set; }
+        public string Resumen { get; set; }
         public Nullable<long> Index { get; set; }
     }
 }

@@ -25,7 +25,7 @@ namespace Grapesoft.Petstar.Events.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool LogIsActive {
             get {
                 return ((bool)(this["LogIsActive"]));
@@ -56,6 +56,51 @@ namespace Grapesoft.Petstar.Events.Properties {
         public string nameSettPathToSave {
             get {
                 return ((string)(this["nameSettPathToSave"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("smtp.office365.com")]
+        public string Email_Host {
+            get {
+                return ((string)(this["Email_Host"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("redessociales@petstar.mx")]
+        public string Email_User {
+            get {
+                return ((string)(this["Email_User"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("redessociales@petstar.mx")]
+        public string Email_From {
+            get {
+                return ((string)(this["Email_From"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("PSTcomunicacion1")]
+        public string Email_Pass {
+            get {
+                return ((string)(this["Email_Pass"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("587")]
+        public int Email_Port {
+            get {
+                return ((int)(this["Email_Port"]));
             }
         }
     }
