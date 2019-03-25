@@ -11,6 +11,8 @@ using Umbraco.Core.Events;
 using Umbraco.Core.Models;
 using Umbraco.Core.Services;
 using Newtonsoft.Json;
+using Umbraco.Core.Publishing;
+using Grapesoft.Petstar.Events.Util;
 
 namespace Grapesoft.Petstar.Events
 {
@@ -20,30 +22,56 @@ namespace Grapesoft.Petstar.Events
         protected override void ApplicationStarted(UmbracoApplicationBase umbracoApplication, ApplicationContext applicationContext)
         {
             Umbraco.Core.Services.ContentService.Published += ContentService_Published;
-            Umbraco.Core.Services.ContentService.Deleted += ContentService_Delete;
-            Umbraco.Core.Services.ContentService.UnPublished += ContentService_UnPublished;
+
+            ContentService.UnPublished += delegate (IPublishingStrategy sender, PublishEventArgs<IContent> e)
+            {
+                try
+                {
+                    Log("UnPublished {0}", e.PublishedEntities.Count());
+                    if (e.PublishedEntities.Count() > 0)
+                    {
 
 
+                        foreach (var entity in e.PublishedEntities)
+                        {
+                            if (entity.ContentType.Name.ToLowerInvariant().Equals("itemprensa"))
+                            {
+                                using (var context = new PetstarEntities())
+                                {
+                                    var news = context.cmsNoticias.Where(x => x.IdUmbraco == entity.Id).First();
+                                    news.Active = false;
+                                    context.SaveChanges();
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    LogError("Error en PublishedEntities: {0}", ex.Message);
+                }
 
+            };
 
+          
         }
 
         private void ContentService_UnPublished(Umbraco.Core.Publishing.IPublishingStrategy sender, PublishEventArgs<IContent> e)
         {
             try
             {
+                Log("UnPublished {0}", e.PublishedEntities.Count());
                 if (e.PublishedEntities.Count() > 0)
                 {
+                    
 
                     foreach (var entity in e.PublishedEntities)
                     {
-                        var alias = entity.ContentType.Name;
-                        if (alias.Equals("itemPrensa"))
+                        if (entity.ContentType.Name.ToLowerInvariant().Equals("itemprensa"))
                         {
-                            var id = entity.ContentType.Id;
                             using (var context = new PetstarEntities())
                             {
-                                var news = context.cmsNoticias.Where(x => x.IdUmbraco == id).First();
+                                var news = context.cmsNoticias.Where(x => x.IdUmbraco == entity.Id).First();
                                 news.Active = false;
                                 context.SaveChanges();
                             }
@@ -57,22 +85,23 @@ namespace Grapesoft.Petstar.Events
             }
         }
 
-        private void ContentService_Delete(IContentService sender, DeleteEventArgs<IContent> e)
+
+
+    private void ContentService_Delete(IContentService sender, DeleteEventArgs<IContent> e)
         {
             try
             {
+
+                Log("DeletedEntities {0}", e.DeletedEntities.Count());
                 if (e.DeletedEntities.Count() > 0)
                 {
-
                     foreach (var entity in e.DeletedEntities)
                     {
-                        var alias = entity.ContentType.Name;
-                        if (alias.Equals("itemPrensa"))
+                        if (entity.ContentType.Name.ToLowerInvariant().Equals("itemprensa"))
                         {
-                            var id = entity.ContentType.Id;
                             using (var context = new PetstarEntities())
                             {
-                                var news = context.cmsNoticias.Where(x => x.IdUmbraco == id).First();
+                                var news = context.cmsNoticias.Where(x => x.IdUmbraco == entity.Id).First();
                                 news.Active = false;
                                 context.SaveChanges();
                             }
@@ -87,7 +116,7 @@ namespace Grapesoft.Petstar.Events
 
         }
 
-        void ContentService_Published(Umbraco.Core.Publishing.IPublishingStrategy sender, Umbraco.Core.Events.PublishEventArgs<Umbraco.Core.Models.IContent> e)
+        void ContentService_Published(IPublishingStrategy sender, PublishEventArgs<IContent> e)
         {
             try
             {
@@ -95,7 +124,7 @@ namespace Grapesoft.Petstar.Events
                 {
                     try
                     {
-                        foreach (var entity in e.PublishedEntities)
+                        foreach (IContent entity in e.PublishedEntities)
                         {
 
                             if (entity.ContentType.Name.ToLowerInvariant().Equals("itemprensa"))
@@ -111,13 +140,14 @@ namespace Grapesoft.Petstar.Events
                                 //return mediaItem.Url;
 
                                 var urlImg = string.Empty;
+                                var urlNode = string.Empty;
 
                                 if (ApplicationContext.Current != null)
                                 {
                                     var ms = ApplicationContext.Current.Services.MediaService;
 
                                     var imageGuidUdi = GuidUdi.Parse(entity.GetValue("imagen").ToString());
-
+                                    
                                     // Get the ID of the node!
                                     if (imageGuidUdi != null)
                                     {
@@ -134,8 +164,8 @@ namespace Grapesoft.Petstar.Events
                                             urlImg = JsonConvert.DeserializeObject<ImageUmb>(img.GetValue("umbracoFile").ToString()).src;
                                         }
                                     }
-
                                 }
+                                
 
                                 //Media file = new Media("imagen", entity.Id, (IMediaType)entity);
                                 //if (file != null)
@@ -158,10 +188,12 @@ namespace Grapesoft.Petstar.Events
                                             IdUmbraco = entity.Id,
                                             IdParent = entity.ParentId,
                                             Titulo = entity.Name,
+                                            Resumen = getData(entity.GetValue("resumenDeLaNoticia")),
                                             Informacion = getData(entity.GetValue("informacion")),
-                                            Link = getData(entity.GetValue("link")),
+                                            Link = urlNode,
                                             Imagen = urlImg,
-                                            TextoFecha = getData(entity.GetValue("fechaYMedios")),
+                                            TextoFecha = getData(entity.GetValue("fechaTexto")),
+
                                             Active = true
                                         };
 
@@ -180,10 +212,11 @@ namespace Grapesoft.Petstar.Events
                                         New.IdUmbraco = entity.Id;
                                         New.IdParent = entity.ParentId;
                                         New.Titulo = entity.Name;
+                                        New.Resumen = getData(entity.GetValue("resumenDeLaNoticia"));
                                         New.Informacion = getData(entity.GetValue("informacion"));
-                                        New.Link = getData(entity.GetValue("link"));
+                                        New.Link = urlNode;
                                         New.Imagen = urlImg;
-                                        New.TextoFecha = getData(entity.GetValue("fechaYMedios"));
+                                        New.TextoFecha = getData(entity.GetValue("fechaTexto"));
                                         New.Active = true;
 
                                         var fechaI = getDate(getData(entity.GetValue("fecha")));
@@ -223,6 +256,7 @@ namespace Grapesoft.Petstar.Events
             var response = string.Empty;
             try
             {
+                if(data != null)
                 response = data.ToString();
             }
             catch (Exception)
@@ -274,7 +308,6 @@ namespace Grapesoft.Petstar.Events
             catch (Exception)
             {
 
-                throw;
             }
 
         }
@@ -294,7 +327,6 @@ namespace Grapesoft.Petstar.Events
             catch (Exception)
             {
 
-                throw;
             }
 
         }
@@ -321,13 +353,6 @@ namespace Grapesoft.Petstar.Events
 
     }
 
-    internal class MethodResponse<T>
-    {
-
-        public int code { get; set; }
-        public string message { get; set; }
-        public T Result { get; set; }
-    }
 
     internal class ImageUmb
     {

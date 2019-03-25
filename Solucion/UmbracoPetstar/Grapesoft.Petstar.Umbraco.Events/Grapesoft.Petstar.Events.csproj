@@ -222,8 +222,11 @@
     <Compile Include="sp_NewsPagination_Result.cs">
       <DependentUpon>PetstarDatabase.tt</DependentUpon>
     </Compile>
+    <Compile Include="Util\EmailControl.cs" />
+    <Compile Include="Util\EmailData.cs" />
     <Compile Include="Util\FileUTil.cs" />
     <Compile Include="Util\Logger.cs" />
+    <Compile Include="Util\MethodResponse.cs" />
     <Compile Include="WUCS\Contacto.ascx.cs">
       <DependentUpon>Contacto.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
